@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171612">
+  <meta name="description" content="Explore the world of Cheesebridge and discover the hidden home of the Boxtrolls.">
+  <title>Explore Cheesebridge — The Boxtrolls</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="boxtrolls-page">
+  <main class="experience" id="experience">
+
+    <nav class="site-menu" aria-label="Main navigation">
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menuPanel">
+
+            <span class="menu-icon" aria-hidden="true">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+
+            <span>MENU</span>
+        </button>
+
+        <div class="menu-panel" id="menuPanel" aria-hidden="true">
+
+            <div class="menu-heading">
+                <span>THE WORLD OF</span>
+                <h2>CHEESEBRIDGE</h2>
+            </div>
+
+            <button class="menu-link is-current" data-menu-go="map">
+                <span>00</span> HOME
+            </button>
+
+            <button class="menu-link" data-menu-go="town">
+                <span>01</span> THE TOWN
+            </button>
+
+            <button class="menu-link" data-menu-go="hideout">
+                <span>02</span> THE HIDEOUT
+            </button>
+
+            <button class="menu-link" data-menu-go="tunnels">
+                <span>03</span> THE TUNNELS
+            </button>
+
+            <button class="menu-link" data-menu-go="workshop">
+                <span>04</span> THE WORKSHOP
+            </button>
+
+            <div class="menu-footer">
+                AN ADVENTURE BELOW THE SURFACE
+            </div>
+
+        </div>
+
+    </nav>
+    <!-- -->
+
+    <header class="intro">
+      <a class="film-mark" href="#experience" aria-label="The Boxtrolls">
+        <span class="mark-small">THE WORLD OF</span>
+        <span class="mark-large">THEBOXTROLLS</span>
+      </a>
+      <p class="intro-copy">A curious town. A hidden world. A thousand things to discover.</p>
+    </header>
+
+    <section class="explorer" aria-label="Explore the world of Cheesebridge">
+      <div class="scene scene--map is-active" id="scene-map" data-scene="map" aria-hidden="false">
+        <img class="scene-image" loading="eager" decoding="async" src="https://www.filmclicks.at/FilmClicks/media/Media-Library/Filme/Box-Universal-5.jpg?width=1000" alt="Eggs and the Boxtrolls in the streets of Cheesebridge">
+        <div class="scene-shade"></div>
+        <div class="scene-caption">
+          <span class="eyebrow">WELCOME TO</span>
+          <h1>TheBoxTrolls</h1>
+          <p>Choose a doorway and begin your adventure.</p>
+        </div>
+        <div class="map-doors" aria-label="Choose a destination">
+          <button class="door door--town" data-go="town">
+            <span class="door-number">01</span><span class="door-name">The Town</span><span class="door-hint">Explore the streets</span>
+          </button>
+          <button class="door door--hideout" data-go="hideout">
+            <span class="door-number">02</span><span class="door-name">The Hideout</span><span class="door-hint">Meet the Boxtrolls</span>
+          </button>
+          <button class="door door--tunnels" data-go="tunnels">
+            <span class="door-number">03</span><span class="door-name">The Tunnels</span><span class="door-hint">Find a secret passage</span>
+          </button>
+          <button class="door door--workshop" data-go="workshop">
+            <span class="door-number">04</span><span class="door-name">The Workshop</span><span class="door-hint">Discover their inventions</span>
+          </button>
+        </div>
+        <div class="map-footer"><!--<span>CHEESEBRIDGE • EST. A LONG TIME AGO</span>--><span>SELECT A DOOR TO EXPLORE</span></div>
+      </div>
+
+      <div class="scene" id="scene-town" data-scene="town" aria-hidden="true">
+        <img class="scene-image" loading="lazy" decoding="async" src="https://illusion-almanac.com/wp-content/uploads/2021/04/boxtrolls-street-02.jpg" alt="A street in Cheesebridge">
+        <div class="scene-shade"></div>
+        <div class="scene-caption"><span class="eyebrow">ABOVE THE COBBLED STREETS</span><h2>The Town</h2><p>Behind every crooked window, a story is waiting.</p></div>
+        <div class="hotspots">
+          <button class="hotspot hotspot--one" data-info="streets"><i>✦</i><span>The old streets</span></button>
+          <button class="hotspot hotspot--two" data-info="cheese"><i>✦</i><span>The cheese market</span></button>
+          <button class="hotspot hotspot--three" data-person="eggs"><i>✦</i><span>Meet Eggs</span></button>
+        </div>
+        <div class="scene-footer"><span>01 / THE TOWN</span><button class="back-map" data-go="map">← Back to Cheesebridge</button></div>
+      </div>
+
+      <div class="scene" id="scene-hideout" data-scene="hideout" aria-hidden="true">
+        <img class="scene-image" loading="lazy" decoding="async" src="https://images.squarespace-cdn.com/content/v1/57d4cbcb9f7456b185ce057b/1473722202197-8930XIUPVKYXOM565I2O/image-asset.jpeg" alt="The Boxtrolls underground cavern">
+        <div class="scene-shade scene-shade--deep"></div>
+        <div class="scene-caption"><span class="eyebrow">HIDDEN BENEATH THE CITY</span><h2>The Hideout</h2><p>Home is where your friends are.</p></div>
+        <div class="hotspots">
+          <button class="hotspot hotspot--one" data-info="inventions"><i>✦</i><span>Found objects</span></button>
+          <button class="hotspot hotspot--two" data-person="fish"><i>✦</i><span>Meet Fish</span></button>
+          <button class="hotspot hotspot--three" data-person="shoe"><i>✦</i><span>Meet Shoe</span></button>
+        </div>
+        <div class="scene-footer"><span>02 / THE HIDEOUT</span><button class="back-map" data-go="map">← Back to Cheesebridge</button></div>
+      </div>
+
+      <div class="scene" id="scene-tunnels" data-scene="tunnels" aria-hidden="true">
+        <img class="scene-image" loading="lazy" decoding="async" src="https://images.bauerhosting.com/legacy/empire-tmdb/films/170687/images/yFtr1BD7AHeruIm9jsVnoebEN2v.jpg?ar=16%3A9&auto=format&crop=top&fit=crop&q=80&w=1200" alt="The Boxtrolls exploring their world">
+        <div class="scene-shade scene-shade--deep"></div>
+        <div class="scene-caption"><span class="eyebrow">FOLLOW THE WHISPERS</span><h2>The Tunnels</h2><p>Not every path leads where you expect.</p></div>
+        <div class="hotspots">
+          <button class="hotspot hotspot--one" data-info="passage"><i>✦</i><span>Secret passage</span></button>
+          <button class="hotspot hotspot--two" data-info="mystery"><i>✦</i><span>What's down there?</span></button>
+        </div>
+        <div class="scene-footer"><span>03 / THE TUNNELS</span><button class="back-map" data-go="map">← Back to Cheesebridge</button></div>
+      </div>
+
+      <div class="scene" id="scene-workshop" data-scene="workshop" aria-hidden="true">
+        <img class="scene-image" loading="lazy" decoding="async" src="https://wallpapers.com/images/high/the-boxtrolls-eggs-shoe-and-fish-90fgmlsgbpnlg8n1.jpg" alt="Eggs, Shoe and Fish">
+        <div class="scene-shade"></div>
+        <div class="scene-caption"><span class="eyebrow">MADE FROM THIS AND THAT</span><h2>The Workshop</h2><p>Every discarded thing has a second life.</p></div>
+        <div class="hotspots">
+          <button class="hotspot hotspot--one" data-info="machine"><i>✦</i><span>Curious machines</span></button>
+          <button class="hotspot hotspot--two" data-person="eggs"><i>✦</i><span>Meet Eggs</span></button>
+          <button class="hotspot hotspot--three" data-person="fish"><i>✦</i><span>Meet Fish</span></button>
+          <button class="hotspot hotspot--four" data-person="shoe"><i>✦</i><span>Meet Shoe</span></button>
+        </div>
+        <div class="scene-footer"><span>04 / THE WORKSHOP</span><button class="back-map" data-go="map">← Back to Cheesebridge</button></div>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+        <div class="footer-logo">
+            <img src="assets/images/logo-footer-theboxtrolls.png"
+                 alt="The Boxtrolls">
+        </div>
+    </footer>
+
+  </main>
+
+  <div class="story-modal" id="storyModal" role="dialog" aria-modal="true" aria-labelledby="storyTitle" aria-hidden="true">
+    <button class="modal-close" type="button" aria-label="Close">×</button>
+    <div class="modal-inner">
+      <span class="modal-eyebrow" id="storyKicker">A LITTLE DISCOVERY</span>
+      <h2 id="storyTitle">A curious discovery</h2>
+      <p id="storyText"></p>
+    </div>
+  </div>
+</body>
+</html>
